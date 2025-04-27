@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autism Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/background/image.jpg'); /* Adjust the path and file extension accordingly */
+            background-size: cover;
+            background-position: left;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity if needed */
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="file"] {
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            outline: none;
+            width: 100%;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Autism Prediction</h1>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
